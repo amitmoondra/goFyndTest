@@ -1,0 +1,5 @@
+<div fxLayout="row wrap" fxLayoutGap="20px">
+  <div *ngFor="let imageData of gridData">
+      <app-image-card [source]="imageData.image_url" [alternativeText]="imageData.name" (deleteImage)="deleteImage($event)" (openDialog)="openDialog($event)"></app-image-card>
+  </div>
+</div>

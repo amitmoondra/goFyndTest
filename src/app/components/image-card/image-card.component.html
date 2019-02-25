@@ -1,0 +1,9 @@
+<mat-card>
+<div class="container">
+  <img [src]="source" [alt]="alternativeText">
+  <div class="overlay">
+    <mat-icon class="cursor-pointer top-right" (click)="deleteImage.emit(source);">close</mat-icon>
+    <mat-icon class="icon" (click)="openDialog.emit(source)">edit</mat-icon>
+  </div>
+</div>
+</mat-card>

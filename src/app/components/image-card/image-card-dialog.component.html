@@ -1,0 +1,20 @@
+<h3 mat-dialog-title>Hi {{data.name}}
+    <div (click)="close()" class="pull-right close-btn cursor-pointer">
+        <mat-icon>close</mat-icon>
+    </div>
+</h3>
+<div mat-dialog-content>
+    <div fxLayout="row wrap" fxLayoutGap="20px">
+        <div class="flex-column">
+            <p>Orginal Image</p>
+            <img [src]="source">
+        </div>
+        <div class="flex-column">
+            <p>New Image</p>
+            <img [src]="newImageUrl">
+            <p><input type="file" (change)="filePath(source)"/></p>
+            <button mat-raised-button color="accent" (click)="submitImage()">Confirm Image</button>
+        </div>
+    </div>
+       
+</div>
